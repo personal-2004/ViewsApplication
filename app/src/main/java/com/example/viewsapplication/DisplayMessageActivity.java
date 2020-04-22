@@ -15,7 +15,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Создаем текстовое поле
-        TextView textView = new TextView(this);
+        TextView textView = new TextView(DisplayMessageActivity.this);
         textView.setTextSize(20);
         textView.setText(message);
 

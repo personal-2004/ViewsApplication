@@ -7,7 +7,7 @@ import android.view.View; // подключаем класс View для обр�
 import android.widget.EditText; // подключаем класс EditText
 
 public class MainActivity extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "EXTRA_MESSAGE";
+    public final static String EXTRA_MESSAGE = "KEY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         // действия, совершаемые после нажатия на кнопку
         // Создаем объект Intent для вызова новой Activity
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
         // Получаем текстовое поле в текущей Activity
         EditText editText = (EditText) findViewById(R.id.edit_message);
         // Получае текст данного текстового поля
@@ -27,5 +27,17 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         // запуск activity
         startActivity(intent);
+    }
+    public void sendMessageActivity2 (View view){
+        Intent intentActivity2 = new Intent(MainActivity.this,Activity2.class);
+        startActivity(intentActivity2);
+    }
+    public void sendMessageActivity3 (View view){
+        Intent intentActivity3 = new Intent(MainActivity.this,Activity3.class);
+        startActivity(intentActivity3);
+    }
+    public void sendMessageActivityView (View view){
+        Intent intentActivityView = new Intent(MainActivity.this,ActivityView.class);
+        startActivity(intentActivityView);
     }
 }
