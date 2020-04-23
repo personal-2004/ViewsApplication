@@ -3,6 +3,7 @@ package com.example.viewsapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent; // подключаем класс Intent
+import android.view.Gravity;
 import android.view.View; // подключаем класс View для обработки нажатия кнопки
 import android.widget.EditText; // подключаем класс EditText
 
@@ -20,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
         // Получаем текстовое поле в текущей Activity
         EditText editText = (EditText) findViewById(R.id.edit_message);
+
         // Получае текст данного текстового поля
         String message = editText.getText().toString();
         // Добавляем с помощью свойства putExtra объект - первый параметр - ключ,
         // второй параметр - значение этого объекта
         intent.putExtra(EXTRA_MESSAGE, message);
+
         // запуск activity
         startActivity(intent);
     }
@@ -39,5 +42,9 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessageActivityView (View view){
         Intent intentActivityView = new Intent(MainActivity.this,ActivityView.class);
         startActivity(intentActivityView);
+    }
+    public void sendMessageActivity4 (View view){
+        Intent intentActivity4 = new Intent(MainActivity.this,Activity4.class);
+        startActivity(intentActivity4);
     }
 }
