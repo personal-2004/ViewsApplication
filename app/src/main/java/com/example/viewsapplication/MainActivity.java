@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         // запуск activity
         startActivity(intent);
     }
-    public void sendMessageActivity2 (View view){
-        Intent intentActivity2 = new Intent(MainActivity.this,Activity2.class);
-        startActivity(intentActivity2);
+    public void sendMessageConstraintLayout (View view){
+        Intent intentConstraintLayout = new Intent(MainActivity.this,ConstraintLayout.class);
+        startActivity(intentConstraintLayout);
     }
     public void sendMessageActivity3 (View view){
         Intent intentActivity3 = new Intent(MainActivity.this,Activity3.class);
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intentActivityView = new Intent(MainActivity.this,ActivityView.class);
         startActivity(intentActivityView);
     }
-    public void sendMessageActivity4 (View view){
-        Intent intentActivity4 = new Intent(MainActivity.this,Activity4.class);
-        startActivity(intentActivity4);
+    public void sendMessageDemoScroll (View view){
+        Intent intentDemoScroll = new Intent(MainActivity.this,DemoScroll.class);
+        startActivity(intentDemoScroll);
     }
 }
