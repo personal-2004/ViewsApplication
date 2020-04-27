@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConstraintExample"></activity>
-        <activity android:name=".ActivityView" />
+        <activity android:name=".ActivityView"></activity>
         <activity android:name=".Activity3" />
         <activity android:name=".Activity2" />
         <activity android:name=".DisplayMessageActivity" />
